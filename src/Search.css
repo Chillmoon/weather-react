@@ -1,0 +1,17 @@
+.searchInput {
+  color: white;
+  background: blueviolet;
+}
+.searchInput,
+.textInput {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid blueviolet;
+  margin: 5px;
+}
+.searchInput:hover {
+  background: white;
+  color: blueviolet;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+}
