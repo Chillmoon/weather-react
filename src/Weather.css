@@ -9,3 +9,20 @@
 .Weather h1 {
   margin-bottom: 0;
 }
+.searchInput,
+.textInput {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid blueviolet;
+  background: white;
+  margin-bottom: 20px;
+}
+.textInput {
+  width: 100%;
+}
+.searchInput:hover {
+  background: blueviolet;
+  color: white;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+}
