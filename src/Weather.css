@@ -1,0 +1,11 @@
+.Weather {
+  text-align: left;
+  padding-left: 10px;
+}
+.Weather ul {
+  list-style-type: none;
+  padding: 0;
+}
+.Weather h1 {
+  margin-bottom: 0;
+}
