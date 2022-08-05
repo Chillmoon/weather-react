@@ -4,19 +4,13 @@ import axios from "axios";
 
 export default function Weather() {
   let [city, setCity] = useState(null);
-  let [message, setMessage] = useState(null);
   let [temperature, setTemperature] = useState(null);
   let [humidity, setHumidity] = useState(null);
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3a94f3778290bfeee61278505dbbe51d&units=metric`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3a94f3778290bfeee61278505dbbe51d&units=metric`;
 
   function showWeather(response) {
-    setTemperature(response.data.main.temp);
+    setTemperature(Math.round(response.data.main.temp));
     setHumidity(response.data.main.humidity);
-    setMessage(
-      `The temperature in ${city} is ${Math.round(
-        temperature
-      )}°C and the humidity is ${humidity}%. Have a great day!`
-    );
   }
 
   function showTemperature(event) {
@@ -35,8 +29,9 @@ export default function Weather() {
             <input
               type="search"
               placeholder="Enter the city"
-              className="textInput"
+              className="textInput form-control"
               onChange={changeCity}
+              autoFocus="on"
             />
           </div>
           <div className="col-3">
@@ -45,23 +40,24 @@ export default function Weather() {
         </form>
       </div>
 
-      <div className="weatherInfo">
-        <h1>Lisbon</h1>
+      <div className="cityInfo">
+        <h1>{city}</h1>
         <ul>
           <li>Tuesday 18:15</li>
           <li>Cloudy</li>
         </ul>
-        <div className="row">
+        <div className="row weatherInfo">
           <div className="col-6">
             <img
               src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
               alt="cloudy"
             />
-            25 °C
+            <span className="temperature">{temperature}</span>
+            <span className="unit">°C</span>
           </div>
           <div className="col-6">
             <ul>
-              <li>Humidity: 70%</li>
+              <li>Humidity: {humidity}%</li>
               <li>Wind: 10 km/h</li>
             </ul>
           </div>

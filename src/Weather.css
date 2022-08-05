@@ -1,28 +1,40 @@
 .Weather {
   text-align: left;
-  padding-left: 10px;
 }
 .Weather ul {
   list-style-type: none;
   padding: 0;
 }
 .Weather h1 {
-  margin-bottom: 0;
+  margin: 20px 0 0 0;
+  color: blue;
 }
+.Weather .temperature {
+  font-size: 40px;
+}
+
 .searchInput,
 .textInput {
   padding: 10px 15px;
   border-radius: 10px;
-  border: 1px solid blueviolet;
+  border: 2px solid blue;
   background: white;
-  margin-bottom: 20px;
 }
-.textInput {
+.textInput,
+.searchInput {
   width: 100%;
 }
 .searchInput:hover {
-  background: blueviolet;
+  background: blue;
   color: white;
   transition: 200ms ease-in-out;
   cursor: pointer;
+}
+.col-3 {
+  padding-left: 0px !important;
+}
+.weatherInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
