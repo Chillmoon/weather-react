@@ -10,7 +10,7 @@
   color: blue;
 }
 .Weather .temperature {
-  font-size: 40px;
+  font-size: 60px;
 }
 
 .searchInput,
@@ -33,8 +33,17 @@
 .col-3 {
   padding-left: 0px !important;
 }
+.iconInfo {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
 .weatherInfo {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  justify-content: right;
+  padding-top: 17px;
+}
+.unit {
+  font-size: 20px;
 }
