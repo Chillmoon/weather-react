@@ -26,11 +26,11 @@ export default function WeatherInfo(props) {
         <CountryFlag country={props.data.country} />
       </div>
       <div className="row">
-        <div className="col-8 iconInfo">
+        <div className="col-7 iconInfo">
           <WeatherIcon code={props.data.icon} />
           <WeatherTemperature celsius={props.data.temperature} />
         </div>
-        <div className="col-4 weatherInfo">
+        <div className="col-5 weatherInfo">
           <ul className="pt-3">
             <li>Humidity: {props.data.humidity}%</li>
             <li>Wind: {props.data.wind} km/h</li>
