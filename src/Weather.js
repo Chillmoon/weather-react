@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import Loading from "./Loading";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -11,6 +12,7 @@ export default function Weather(props) {
     setWeatherData({
       ready: true,
       city: response.data.name,
+      country: response.data.sys.country,
       temperature: Math.round(response.data.main.temp),
       date: new Date(response.data.dt * 1000),
       humidity: response.data.main.humidity,
@@ -59,6 +61,6 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return <h1>Loading...</h1>;
+    return <Loading />;
   }
 }
