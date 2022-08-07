@@ -8,6 +8,11 @@ export default function App() {
       <div className="container">
         <Weather defaultCity="Smila" />
       </div>
+      <footer>
+        This project was coded by <a href="https://t.me/Chillmoon">Chillmoon</a>{" "}
+        and is open-sourced on{" "}
+        <a href="https://github.com/Chillmoon/weather-react">GitHub</a>.
+      </footer>
     </div>
   );
 }
